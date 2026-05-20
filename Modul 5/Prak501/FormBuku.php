@@ -20,8 +20,10 @@ if ($id) {
 if (isset($_POST['submit'])) {
     if ($id) {
         updateBuku($id, $_POST['judul'], $_POST['penulis'], $_POST['penerbit'], $_POST['tahun']);
+        echo "<script>alert('Data berhasil diperbarui'); window.location='Buku.php';</script>";
     } else {
         insertBuku($_POST['judul'], $_POST['penulis'], $_POST['penerbit'], $_POST['tahun']);
+        echo "<script>alert('Data berhasil disimpan'); window.location='Buku.php';</script>";
     }
 }
 ?>
