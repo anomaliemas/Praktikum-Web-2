@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
         <input type="number" name="id_member" value="<?= htmlspecialchars($id_member) ?>" required>
         <label>Judul Buku:</label>
         <select name="id_buku" required class="form-control">
-            <option value="">-- Pilih Buku --</option>
+            <option value=""></option>
             <?php
             $pdo = koneksi();
             $query = $pdo->query("SELECT id_buku, judul_buku FROM buku");
