@@ -53,8 +53,15 @@ function getPeminjamanById($id) {
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 function insertPeminjaman($id_member, $id_buku, $tgl_pinjam, $tgl_kembali) {
-    $sql = "INSERT INTO peminjaman (id_member, id_buku, tgl_pinjam, tgl_kembali) VALUES (?, ?, ?, ?)";
-    koneksi()->prepare($sql)->execute([$id_member, $id_buku, $tgl_pinjam, $tgl_kembali]);
+    try {
+        $pdo = koneksi();
+        $sql = "INSERT INTO peminjaman (id_member, id_buku, tgl_pinjam, tgl_kembali) VALUES (:id_member, :id_buku, :tgl_pinjam, :tgl_kembali)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['id_member' => $id_member, 'id_buku' => $id_buku, 'tgl_pinjam' => $tgl_pinjam, 'tgl_kembali' => $tgl_kembali]);
+        echo "<script>alert('Data berhasil ditambahkan');window.location='Peminjaman.php'</script>";
+    } catch (PDOException $e) {
+        echo "<script>alert('Gagal: ID Member atau ID Buku belum terdaftar di sistem');window.location='FormPeminjaman.php'</script>";
+    }
 }
 function updatePeminjaman($id, $id_member, $id_buku, $tgl_pinjam, $tgl_kembali) {
     $sql = "UPDATE peminjaman SET id_member=?, id_buku=?, tgl_pinjam=?, tgl_kembali=? WHERE id_peminjaman=?";
