@@ -1,4 +1,5 @@
 <?php
+ob_start();
 require("Model.php");
 require("Style.php");
 date_default_timezone_set('Asia/Makassar');
