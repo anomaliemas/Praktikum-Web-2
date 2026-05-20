@@ -24,7 +24,6 @@ if (isset($_POST['submit'])) {
     } else {
         insertPeminjaman($_POST['id_member'], $_POST['id_buku'], $_POST['tgl_pinjam'], $_POST['tgl_kembali']);
     }
-    header("Location: Peminjaman.php");
 }
 ?>
 <!DOCTYPE html>
