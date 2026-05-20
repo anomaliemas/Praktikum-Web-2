@@ -23,7 +23,6 @@ if (isset($_POST['submit'])) {
     } else {
         insertBuku($_POST['judul'], $_POST['penulis'], $_POST['penerbit'], $_POST['tahun']);
     }
-    header("Location: Buku.php");
 }
 ?>
 <!DOCTYPE html>
