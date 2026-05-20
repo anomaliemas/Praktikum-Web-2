@@ -68,8 +68,7 @@ if (isset($_GET['hapus'])) {
                         $no++;
                     }
                 } else {
-                    echo "<tr><td colspan='7' class='empty-state'><p>Belum ada data peminjaman</p><a href='FormPeminjaman.php' class='btn'>+ Tambah Peminjaman Pertama</a></td></tr>";
-                }
+                echo "<tr><td colspan='6'>Belum ada data peminjaman</td></tr>";}
                 ?>
             </tbody>
         </table>
