@@ -21,8 +21,10 @@ if ($id) {
 if (isset($_POST['submit'])) {
     if ($id) {
         updatePeminjaman($id, $_POST['id_member'], $_POST['id_buku'], $_POST['tgl_pinjam'], $_POST['tgl_kembali']);
+        echo "<script>alert('Data berhasil diperbarui'); window.location='Member.php';</script>";
     } else {
         insertPeminjaman($_POST['id_member'], $_POST['id_buku'], $_POST['tgl_pinjam'], $_POST['tgl_kembali']);
+        echo "<script>alert('Data berhasil disimpan'); window.location='Member.php';</script>";
     }
 }
 ?>
