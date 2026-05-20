@@ -1,9 +1,11 @@
 <?php
+ob_start();
 require("Model.php");
 require("Style.php");
 
 if (isset($_GET['hapus'])) {
     deleteMember($_GET['hapus']);
+    header("Location: Member.php");
     exit;
 }
 ?>
