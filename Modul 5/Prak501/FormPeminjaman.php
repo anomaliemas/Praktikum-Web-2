@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
         <label>ID Member:</label>
         <input type="number" name="id_member" value="<?= htmlspecialchars($id_member) ?>" required>
         <label>Judul Buku:</label>
-        <select name="id_buku" required style="width: 100%; padding: 8px; border: 1px solid #ced4da; border-radius: 4px; box-sizing: border-box; display: block; margin-bottom: 10px;">
+        <select name="id_buku" required class="form-control">
             <option value="">-- Pilih Buku --</option>
             <?php
             $pdo = koneksi();
