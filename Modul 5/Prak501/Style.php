@@ -168,7 +168,7 @@
         font-size: 0.875rem;
     }
 
-    input[type=text], input[type=date], input[type=number], textarea {
+    input[type=text], input[type=date], input[type=number], textarea, select, input[type=datetime-local] {
         width: 100%;
         padding: 12px 14px;
         margin-bottom: 20px;
@@ -179,7 +179,7 @@
         background-color: #fafbfc;
     }
 
-    input:focus, textarea:focus {
+    input:focus, textarea:focus, select:focus {
         outline: none;
         border-color: var(--biru-utama);
         background-color: var(--putih);
