@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
         <label>Alamat:</label>
         <textarea name="alamat" required><?= htmlspecialchars($alamat) ?></textarea>
         <label>Tgl Mendaftar:</label>
-        <input type="date" name="tgl_mendaftar" value="<?= $tgl_mendaftar ?>" required>
+        <input type="datetime-local" name="tgl_mendaftar" value="<?= $tgl_mendaftar ?>" required>
         <label>Tgl Terakhir Bayar:</label>
         <input type="date" name="tgl_bayar" value="<?= $tgl_bayar ?>" required>
         <button type="submit" name="submit" class="btn">Simpan</button>
