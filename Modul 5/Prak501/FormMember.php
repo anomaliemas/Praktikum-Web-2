@@ -23,8 +23,10 @@ if ($id) {
 if (isset($_POST['submit'])) {
     if ($id) {
         updateMember($id, $_POST['nama'], $_POST['nomor'], $_POST['alamat'], $_POST['tgl_mendaftar'], $_POST['tgl_bayar']);
+        echo "<script>alert('Data berhasil diperbarui'); window.location='Member.php';</script>";
     } else {
         insertMember($_POST['nama'], $_POST['nomor'], $_POST['alamat'], $_POST['tgl_mendaftar'], $_POST['tgl_bayar']);
+        echo "<script>alert('Data berhasil disimpan'); window.location='Member.php';</script>";
     }
 }
 ?>
@@ -44,7 +46,7 @@ if (isset($_POST['submit'])) {
         <label>Alamat:</label>
         <textarea name="alamat" required><?= htmlspecialchars($alamat) ?></textarea>
         <label>Tgl Mendaftar:</label>
-        <input type="datetime-local" name="tgl_mendaftar" value="<?= $tgl_mendaftar ?>" required>
+        <input type="date" name="tgl_mendaftar" value="<?= $tgl_mendaftar ?>" required>
         <label>Tgl Terakhir Bayar:</label>
         <input type="date" name="tgl_bayar" value="<?= $tgl_bayar ?>" required>
         <button type="submit" name="submit" class="btn">Simpan</button>
