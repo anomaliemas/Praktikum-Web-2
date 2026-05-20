@@ -26,7 +26,6 @@ if (isset($_POST['submit'])) {
     } else {
         insertMember($_POST['nama'], $_POST['nomor'], $_POST['alamat'], $_POST['tgl_mendaftar'], $_POST['tgl_bayar']);
     }
-    header("Location: Member.php");
 }
 ?>
 <!DOCTYPE html>
