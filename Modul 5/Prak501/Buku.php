@@ -62,7 +62,7 @@ if (isset($_GET['hapus'])) {
                         $no++;
                     }
                 } else {
-                    eecho "<tr><td colspan='6'>Belum ada data peminjaman</td></tr>";
+                    echo "<tr><td colspan='6'>Belum ada data peminjaman</td></tr>";
                 }
                 ?>
             </tbody>
