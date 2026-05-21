@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
     <form method="POST">
        <label>Nama Member:</label>
 <select name="id_member" required>
-    <option value="">-- Pilih Member --</option>
+    <option value=""></option>
     <?php
     $pdo = koneksi();
     $queryMember = $pdo->query("SELECT id_member, nama_member FROM member");
