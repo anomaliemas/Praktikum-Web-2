@@ -45,7 +45,8 @@ function deleteBuku($id) {
 
 // --- FUNGSI PEMINJAMAN ---
 function getPeminjaman() {
-    return koneksi()->query("SELECT * FROM peminjaman")->fetchAll(PDO::FETCH_ASSOC);
+    $sql = "SELECT peminjaman.*, member.nama_member, buku.judul_buku FROM peminjaman LEFT JOIN member ON peminjaman.id_member = member.id_member LEFT JOIN buku ON peminjaman.id_buku = buku.id_buku";
+    return koneksi()->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 }
 function getPeminjamanById($id) {
     $stmt = koneksi()->prepare("SELECT * FROM peminjaman WHERE id_peminjaman=?");
