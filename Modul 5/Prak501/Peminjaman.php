@@ -35,8 +35,8 @@ if (isset($_GET['hapus'])) {
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>ID Member</th>
-                    <th>ID Buku</th>
+                    <th>Nama Member</th>
+                    <th>Judul Buku</th>
                     <th>Tgl Pinjam</th>
                     <th>Tgl Kembali</th>
                     <th>Status</th>
