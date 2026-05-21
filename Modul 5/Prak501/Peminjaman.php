@@ -55,8 +55,8 @@ if (isset($_GET['hapus'])) {
                         
                         echo "<tr>";
                         echo "<td>{$no}</td>";
-                        echo "<td>{$row['id_member']}</td>";
-                        echo "<td>{$row['id_buku']}</td>";
+                        echo "<td>{$row['nama_member']}</td>";
+                        echo "<td>{$row['judul_buku']}</td>";
                         echo "<td>" . date('d M Y', strtotime($row['tgl_pinjam'])) . "</td>";
                         echo "<td>" . date('d M Y', strtotime($row['tgl_kembali'])) . "</td>";
                         echo "<td>{$status}</td>";
