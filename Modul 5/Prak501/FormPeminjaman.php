@@ -34,8 +34,17 @@ if (isset($_POST['submit'])) {
 <body>
     <h2>Form Peminjaman</h2>
     <form method="POST">
-        <label>ID Member:</label>
-        <input type="number" name="id_member" value="<?= htmlspecialchars($id_member) ?>" required>
+       <label>Nama Member:</label>
+<select name="id_member" required>
+    <option value="">-- Pilih Member --</option>
+    <?php
+    $pdo = koneksi();
+    $queryMember = $pdo->query("SELECT id_member, nama_member FROM member");
+    while ($member = $queryMember->fetch(PDO::FETCH_ASSOC)) {
+        echo "<option value='" . $member['id_member'] . "'>" . $member['nama_member'] . "</option>";
+    }
+    ?>
+</select>
         <label>Judul Buku:</label>
         <select name="id_buku" required class="form-control">
             <option value=""></option>
